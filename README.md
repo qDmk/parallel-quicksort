@@ -7,7 +7,7 @@
 
 ## Бенчмарки
 
-Бенчмари находятся в [tests/test.rs](tests/test.rs).
+Бенчмарки находятся в [benches/benchmark.rs](benches/benchmark.rs).
 Запустить через cargo ([установить тут](https://rustup.rs/)): `cargo bench`
 
 Либо в docker:
@@ -15,6 +15,7 @@
 docker build -t qdmk4-quicksort .
 docker run qdmk4-quicksort
 ```
+При запуске в докере сначала запустятся тесты, затем бенчмарки.
 
 Бенчмарк производится при помощи крейта [`criterion`](https://docs.rs/criterion/latest/criterion/).
 Усреднение по 10 запускам (criterion не позволяет установить меньше, он очень старается делать все возможное для статистической значимости).
